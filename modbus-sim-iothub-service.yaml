@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: modbus-sim-iothub
+  labels:
+    component: modbus-sim-iothub
+spec:
+  selector:
+    component: modbus-sim-iothub
+  ports:
+  - protocol: TCP
+    port: 502             # 服務對外暴露的端口
+    targetPort: 502        # Pod 中的端口
+  type: LoadBalancer

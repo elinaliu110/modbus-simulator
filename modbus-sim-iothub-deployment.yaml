@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: modbus-sim-iothub
+  labels:
+    component: modbus-sim-iothub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: modbus-sim-iothub
+  template:
+    metadata:
+      labels:
+        component: modbus-sim-iothub
+    spec:
+      containers:
+        - name: modbus-sim-iothub
+          image: elinaliu110147/modbus-sim:20250303-v6
+          ports:
+          - containerPort: 502
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 25m
+              memory: 64Mi
+              ephemeral-storage: 64Mi
+            requests:
+              cpu: 10m
+              memory: 64Mi
