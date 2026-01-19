@@ -64,3 +64,17 @@ kubectl get pods
 # Get service details for modbus-sim-iothub
 kubectl get svc modbus-sim-iothub
 ```
+
+## Register Map
+
+| Register | Address | Type     | Initial Value | Update Interval | Range   | Description |
+|---------:|--------:|----------|---------------|-----------------|---------|-------------|
+| 40001    | 0       | Writable | 0             | -               | -       | Light sensor ON/OFF status |
+| 40002    | 1       | Writable | 0             | -               | -       | Fan sensor ON/OFF status |
+| 40003    | 2       | Writable | 0             | -               | -       | Door sensor ON/OFF status |
+| 40004    | 3       | Random   | 50–55         | 60s             | 50–55   | Simulated temperature value |
+| 40005    | 4       | Random   | 20–23         | 60s             | 20–23   | Simulated humidity value |
+| 40006    | 5       | Random   | 24–26         | 60s             | 24–26   | Simulated pressure value |
+| 40007    | 6       | Random   | 60–65         | 60s             | 60–65   | Simulated power usage |
+| 40008    | 7       | Random   | 650–665       | 120s            | 650–665 | Simulated voltage value |
+
