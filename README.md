@@ -8,9 +8,6 @@ A practical development and testing toolset designed to simulate a Modbus TCP Se
 * **Lightweight**: Minimal dependencies, focused on performance and reliability.
 
 ## Project Structure
-
-## Getting Started
-
 ```bash
 ModbusSimulator/
 │
@@ -20,6 +17,8 @@ ModbusSimulator/
 ├── service.yaml                        # Kubernetes service config
 └── README.md                           # Document
 ```
+
+## Getting Started
 
 ### 1. Prerequisites
 * Python 3.x
