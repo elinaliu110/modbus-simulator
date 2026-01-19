@@ -29,9 +29,9 @@ python MODBUS_TCP_Server_v22_IoTEdge.py
 To run the simulator using Docker:
 ```bash
 # Build the image
-docker build -t modbus-sim -f docker.Dockerfile .
+docker build -t modbus-simulator -f docker.Dockerfile .
 
-# Run the container (Mapping default Modbus port 502)
+# Run the container
 docker run -d -p 502:502 --name modbus-server modbus-simulator
 ```
 
@@ -46,6 +46,9 @@ kubectl apply -f modbus-sim-iothub-service.yaml
 ```
 Check status:
 ```bash
+# List all running pods
 kubectl get pods
+
+# Get service details for modbus-sim-iothub
 kubectl get svc modbus-sim-iothub
 ```
