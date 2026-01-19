@@ -7,7 +7,19 @@ A practical development and testing toolset designed to simulate a Modbus TCP Se
 * **Cloud Ready**: Pre-configured Kubernetes YAML files for Azure IoT Hub or local K8s clusters.
 * **Lightweight**: Minimal dependencies, focused on performance and reliability.
 
+## Project Structure
+
 ## Getting Started
+
+```bash
+ModbusSimulator/
+│
+├── MODBUS_TCP_Server_v22_IoTEdge.py    # Main Python script
+├── Dockerfile                          # Docker configuration
+├── deployment.yaml                     # Kubernetes deployment config
+├── service.yaml                        # Kubernetes service config
+└── README.md                           # Document
+```
 
 ### 1. Prerequisites
 * Python 3.x
